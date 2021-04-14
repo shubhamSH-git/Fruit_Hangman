@@ -1,7 +1,7 @@
 import random
 
 def play():
-    words = ['Apricot', 'Avocado', 'Banana', 'Bilberry', 'Blackberry', 'Blackcurrant', 'Blueberry', 'Currant', 'Cherry', 'Cherimoya', 'Clementine', 'Date', 'Damson', 'Durian', 'Eggplant', 'Elderberry', 'Feijoa', 'Gooseberry', 'Grape', 'Grapefruit', 'Guava', 'Huckleberry', 'Jackfruit', 'Jambul', 'Kiwi fruit', 'Kumquat', 'Legume', 'Lemon', 'Lime', 'Lychee', 'Mango', 'Mangostine', 'Melon', 'Cantaloupe',  'Watermelon', 'Rock melon', 'Nectarine', 'Orange', 'Peach', 'Pear', 'Pitaya', 'Physalis', 'Pineapple', 'Pomegranate', 'Raisin', 'Raspberry', 'Rambutan', 'Redcurrant', 'Satsuma', 'Strawberry', 'Tangerine', 'Tomato', 'Watermelon']
+    words = ['Avocado', 'Banana', 'apple',  'Guava',  'Lemon', 'Lime', 'Lychee', 'Mango', 'Melon', 'Cantaloupe',  'Watermelon', 'Orange', 'Peach', 'Pineapple', 'Pomegranate', 'Strawberry', 'Tomato', 'Watermelon']
     guess = 3
     n = random.randint(0, len(words) - 1)
     w = words[n]
@@ -13,7 +13,9 @@ def play():
         else:
             marker[l] = 1
     visible = [random.randint(0,int(len(w)/2)-1),random.randint(int(len(w)/2),len(w) - 1)]
+
     marker[w[visible[0]]] = marker[w[visible[0]]] - 1
+    marker[w[visible[1]]]-=1
 
     def show_letter(w, to_show):
         s = ""
@@ -54,9 +56,40 @@ def play():
         else:
             print("Incorrect Guess :")
             guess = guess - 1
+        print("HANGMAN\n")
+        if guess==0:
+            print("   _____ \n"
+                  "  |     | \n"
+                  "  |     |\n"
+                  "  |     | \n"
+                  "  |     O \n"
+                  "  |    /|\ \n"
+                  "  |    / \ \n"
+                  "__|__\n")
+        elif guess==1:
+            print("   _____ \n"
+                  "  |     | \n"
+                  "  |     |\n"
+                  "  |     | \n"
+                  "  |     O \n"
+                  "  |    /|\ \n"
+                  "  |         \n"
+                  "__|__\n")
+        else:
+            print("   _____ \n"
+                  "  |     | \n"
+                  "  |     |\n"
+                  "  |     | \n"
+                  "  |     O \n"
+                  "  |       \n"
+                  "  |       \n"
+                  "__|__\n")
+
+
 
 if __name__=="__main__" :
     play()
+
 
 
 

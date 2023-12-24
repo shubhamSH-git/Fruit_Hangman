@@ -3,10 +3,11 @@ import random
 def play():
     words = ['Sudama Potli', 'Avocado', 'Banana', 'apple',  'Guava',  'Lemon', 'Lime', 'Lychee', 'Mango', 'Melon', 'Cantaloupe',  'Watermelon', 'Orange', 'Peach', 'Pineapple', 'Pomegranate', 'Strawberry', 'Tomato', 'Watermelon']
     guess = 3
+    for i in range(len(words)):
+       words[i]=words[i].lower()
     n = random.randint(0, len(words) - 1)
     w = words[n]
     marker = {}
-
     for l in w:
         if l in marker:
             marker[l] += 1

@@ -1,7 +1,7 @@
 import random
 
 def play():
-    words = ['Avocado', 'Banana', 'apple',  'Guava',  'Lemon', 'Lime', 'Lychee', 'Mango', 'Melon', 'Cantaloupe',  'Watermelon', 'Orange', 'Peach', 'Pineapple', 'Pomegranate', 'Strawberry', 'Tomato', 'Watermelon']
+    words = ['Sudama Poti', 'Avocado', 'Banana', 'apple',  'Guava',  'Lemon', 'Lime', 'Lychee', 'Mango', 'Melon', 'Cantaloupe',  'Watermelon', 'Orange', 'Peach', 'Pineapple', 'Pomegranate', 'Strawberry', 'Tomato', 'Watermelon']
     guess = 3
     n = random.randint(0, len(words) - 1)
     w = words[n]
